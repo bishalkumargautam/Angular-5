@@ -1,3 +1,19 @@
-<div class="container">
+<!-- <div class="container">
 <app-list-employees></app-list-employees>
+</div> -->
+
+<!--nav nar that creates menu on top of page-->
+<div class="container">
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <li>
+             <a routerLink="list">List</a> <!--routerLink directive is provided by routermodule, we can use it to mention the route that we want to travel to  -->
+        </li>
+        <li>
+            <a routerLink="create">Create</a>
+        </li>
+
+    </ul>
+</nav>
+<router-outlet></router-outlet> <!--where to display the new routed items, this directive is porvided by router module-->
 </div>
