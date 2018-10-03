@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 
 import { AppComponent } from './app.component';
 import { ListEmployeesComponent } from './employees/list-employees.component';
@@ -26,6 +28,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    BsDatepickerModule.forRoot(),
     RouterModule.forRoot(appRoutes)  //step2 letting angular router know about our configured routes 
   ],
   providers: [],
