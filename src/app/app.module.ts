@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router'
 import { AppComponent } from './app.component';
 import { ListEmployeesComponent } from './employees/list-employees.component';
 import { CreateEmployeesComponent } from './employees/create-employees.component';
+import {FormsModule} from '@angular/forms'
+
 
 //step1
 //configuring routes
@@ -23,6 +25,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)  //step2 letting angular router know about our configured routes 
   ],
   providers: [],
