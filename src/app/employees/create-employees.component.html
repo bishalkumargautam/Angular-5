@@ -110,16 +110,16 @@
         <label for="department" class="control-label">
           Department
         </label>
-        <select appSelectorValidator id="department" name="department" [(ngModel)]="employee.department" class="form-control"
+        <select appSelectorValidator="select" id="department" name="department" [(ngModel)]="employee.department" class="form-control"
           #department="ngModel">
           <!-- hardcoding option valuess
               <option value="1">Help Desk</option>
               <option value="2">IT</option>
               <option value="3">HR</option> -->
-          <option  value="-1"> Select Department</option>
+          <option  value="select"> Select Department</option>
           <option *ngFor="let dept of departments" value="dept.id">{{dept.name}}</option>
         </select>
-        <span class="help-block" *ngIf="department.invalid && department.errors?.defaultSelected">Department is Required</span>
+        <span class="help-block" *ngIf="department.touched && department.errors?.defaultSelected">Department is Required</span>
       </div>
 
       <!--Date of Birth-->

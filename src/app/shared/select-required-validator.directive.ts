@@ -1,4 +1,4 @@
-import { Directive } from '@angular/core';
+import { Directive,Input } from '@angular/core';
 import { Validator, AbstractControl, NG_VALIDATORS } from '@angular/forms';
 
 @Directive({
@@ -8,11 +8,11 @@ import { Validator, AbstractControl, NG_VALIDATORS } from '@angular/forms';
         useExisting: selectvalidationdirective,
         multi: true
     }]
-
 })
 
 export class selectvalidationdirective implements Validator {
+   @Input('appSelectorValidator') defaultValue:string;
     validate(control: AbstractControl): { [key: string]: any } | null {
-        return control.value === '-1' ? { 'defaultSelected': true } : null;
+        return control.value === this.defaultValue ? { 'defaultSelected': true } : null;
     }
 }
