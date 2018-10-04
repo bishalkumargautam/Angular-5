@@ -40,9 +40,10 @@
       </div>
       <div class="form-group" [class.has-error]="email.invalid && email.touched">
         <label for="email" class="control-label">Email</label>
-        <input id="email" name="Email" [(ngModel)]="employee.email" 
-        type="text" required class="form-control" placeholder="Email" #email="ngModel">
-        <span class="help-block" *ngIf="email.invalid">Email is Required</span>
+        <input id="email" required email name="Email" [(ngModel)]="employee.email" 
+        type="text" class="form-control" placeholder="Email" #email="ngModel">
+        <span class="help-block" *ngIf="email.error?.required && email.touched">Email is Required</span>
+        <span class="help-block" *ngIf="email.errors?.email && email.touched">Email is Invalid.</span>
       </div>
       <div class="form-group" [class.has-error]="phoneNumber.invalid && phoneNumber.touched " >
         <label for="phoneNumber" class="control-label">Phone Number</label>
@@ -106,7 +107,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="form-group">
         <label for="photoPath">Photo Path</label>
         <div>

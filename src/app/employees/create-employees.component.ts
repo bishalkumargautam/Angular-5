@@ -62,7 +62,7 @@ export class CreateEmployeesComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveEmployee(newEmployee: Employee) {
+  saveEmployee(newEmployee: Employee) :void{
     console.log(newEmployee);
   }
 }
