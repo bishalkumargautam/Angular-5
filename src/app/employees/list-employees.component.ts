@@ -29,7 +29,7 @@ export class ListEmployeesComponent implements OnInit {
       department:'HR',
       isActive:true,
       photoPath:'assets/images/John.png'
-      
+     
     },
     { id:1,
       name:'Samantha',
