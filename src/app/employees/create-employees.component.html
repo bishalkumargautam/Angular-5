@@ -64,7 +64,7 @@
         <label for="email" class="control-label">Email</label>
         <input id="email" [required]="contactPreferece.value=='preferenceEmail'" email name="Email" [(ngModel)]="employee.email"
           type="text" class="form-control" placeholder="Email" #email="ngModel">
-        <span class="help-block" *ngIf="email.error?.required">Email is Required</span>
+        <span class="help-block" *ngIf="email.errors?.required">Email is Required</span>
         <span class="help-block" *ngIf="email.errors?.email">Email is Invalid.</span>
       </div>
 
@@ -110,16 +110,16 @@
         <label for="department" class="control-label">
           Department
         </label>
-        <select required id="department" name="department" [(ngModel)]="employee.department" class="form-control"
+        <select appSelectorValidator id="department" name="department" [(ngModel)]="employee.department" class="form-control"
           #department="ngModel">
           <!-- hardcoding option valuess
               <option value="1">Help Desk</option>
               <option value="2">IT</option>
               <option value="3">HR</option> -->
-          <option disabled [ngValue]="null"> Select Department</option>
-          <option *ngFor="let dept of departments" [ngValue]="dept">{{dept.name}}</option>
+          <option  value="-1"> Select Department</option>
+          <option *ngFor="let dept of departments" value="dept.id">{{dept.name}}</option>
         </select>
-        <span class="help-block" *ngIf="department.invalid && department.touched">Department is Required</span>
+        <span class="help-block" *ngIf="department.invalid && department.errors?.defaultSelected">Department is Required</span>
       </div>
 
       <!--Date of Birth-->
