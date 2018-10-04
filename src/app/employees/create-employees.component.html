@@ -1,19 +1,21 @@
 <form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)">
   <div class="panel panel-primary success">
     <div class="panel-heading">Create Employee</div>
-    <div class="panel-body">
-      <div class="form-group">
-        <label for="fullName">Full Name</label>
+    <div class="panel-body"></div>
+      <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched">
+        <label for="fullName" class="control-label">Full Name</label>
         <input id="fullName" required name="fullName" [(ngModel)]="fullName" type="text" class="form-control"
           placeholder="Full Name" #fullNameControl="ngModel">
-        <div>
+          <span class="help-block" *ngIf="fullNameControl.invalid && fullNameControl.touched">Full name is required.</span>
+
+        <!-- <div>
           <table class="table table-sm">
             <tr>
               <td>
                 touched: {{fullNameControl.touched}}
               </td>
               <td>
-                untouched: {{fullNameControl.untouched}}
+                touched: {{fullNameControl.untouched}}
               </td>
             </tr>
             <tr>
@@ -34,16 +36,19 @@
               </tr>
 
           </table>
-        </div>
+        </div> -->
       </div>
-      <div class="form-group">
-        <label for="Email">Email</label>
-        <input id="email" name="Email" [(ngModel)]="Email" type="text" class="form-control" placeholder="Email">
+      <div class="form-group" [class.has-error]="EmailControl.invalid && EmailControl.touched">
+        <label for="Email" class="control-label">Email</label>
+        <input id="email" name="Email" [(ngModel)]="Email" 
+        type="text" required class="form-control" placeholder="Email" #EmailControl="ngModel">
+        <span class="help-block" *ngIf="EmailControl.invalid">Email is Required</span>
       </div>
-      <div class="form-group">
-        <label for="phoneNumber">Phone Number</label>
-        <div class="form-control">
-          <input id="phoneNumber" type="text" name="phoneNumber" [(ngModel)]="phoneNumber">
+      <div class="form-group" [class.has-error]="phoneNumberControl.invalid && phoneNumberControl.touched " >
+        <label for="phoneNumber" class="control-label">Phone Number</label>
+        <div >
+          <input required class="form-control" id="phoneNumber" type="text" name="phoneNumber" [(ngModel)]="phoneNumber" #phoneNumberControl="ngModel">
+          <span class="help-block" *ngIf="phoneNumberControl.invalid && phoneNumberControl.touched">Phone Number is required</span>
         </div>
       </div>
       <div class="form-group">
@@ -58,10 +63,7 @@
             Phone Number
           </label>
         </div>
-
       </div>
-
-
       <div class="form-group">
         <label>Gender</label>
         <div class="form-control">
@@ -118,9 +120,9 @@
         <img [src]="photoPath" height="200" width="200" *ngIf="previewPhoto" />
       </div>
       <div class="panel-footer">
-        <button type="submit" class="btn btn-primary">Submit </button>
+        <button type="submit" [disabled]="employeeForm.invalid" class="btn btn-primary">Submit </button>
       </div>
-    </div>
+    
   </div>
 </form>
 
