@@ -69,16 +69,28 @@
         <div class="form-group col-xs-5">
           <label for="dateOfBirth">Date Of Birth</label>
           <div>
-            <input type="text" bsDatepicker id="dateOfBirth" class="form-control" [bsConfig]="datePickerConfig" placement="right" name="dateOfBirth"
-              [(ngModel)]="dateOfBirth">
+            <input type="text" bsDatepicker id="dateOfBirth" class="form-control" [bsConfig]="datePickerConfig"
+              placement="right" name="dateOfBirth" [(ngModel)]="dateOfBirth">
           </div>
         </div>
+      </div>
+      <div class="form-group">
+        <label for="photoPath">Photo Path</label>
+        <div>
+          <input class="form-control" type="text" name="photoPath" id="photoPath" [(ngModel)]="photoPath">
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" (click)="togglePreview()">{{previewPhoto?"Hide":"Show"}}
+            Preview</button>
+        </div>
+      </div>
+      <div form="form-group">
+        <img [src]="photoPath" height="200" width="200" *ngIf="previewPhoto" />
       </div>
       <div class="panel-footer">
         <button type="submit" class="btn btn-primary">Submit </button>
       </div>
     </div>
-
   </div>
 </form>
 
