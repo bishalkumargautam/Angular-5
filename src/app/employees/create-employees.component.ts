@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Department } from '../models/department.model';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { Employee } from '../models/employee.model'
 
 @Component({
   selector: 'app-create-employees',
@@ -17,10 +18,22 @@ export class CreateEmployeesComponent implements OnInit {
 
 
   //define departments properties to dynamically populate select in .html
-
   datePickerConfig: Partial<BsDatepickerConfig>;
 
   previewPhoto: Boolean = false;
+
+  employee: Employee = {
+    id: null,
+    name: null,
+    gender: null,
+    email: null,
+    phoneNumber: null,
+    contactPreference: null,
+    dateOfBirth: null,
+    department: null,
+    isActive: null,
+    photoPath: null,
+  };
 
   departments: Department[] = [
     { id: 1, name: 'IT' },
@@ -34,10 +47,10 @@ export class CreateEmployeesComponent implements OnInit {
     this.datePickerConfig = Object.assign({}, // customizing date properties like color, maxdate, min date
       {
         containerClass: 'theme-dark-blue',
-        showWeekNumbers: false,
-        minDate: new Date(2018, 0, 1),
-        maxDate: new Date(2018, 12, 31),
-        dateInputFormat: 'DD/MM/YY',
+        // showWeekNumbers: false,
+        // minDate: new Date(2018, 0, 1),
+        // maxDate: new Date(2018, 12, 31),
+        dateInputFormat: 'DD/MM/YYYY',
 
       });
   }
@@ -49,7 +62,7 @@ export class CreateEmployeesComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveEmployee(empForm: NgForm) {
-    console.log(empForm);
+  saveEmployee(newEmployee: Employee) {
+    console.log(newEmployee);
   }
 }
