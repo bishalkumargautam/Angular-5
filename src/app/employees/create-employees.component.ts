@@ -47,7 +47,7 @@ export class CreateEmployeesComponent implements OnInit {
     { id: 5, name: 'Admin' }
   ];
 
-  constructor(private _employeeService:EmployeeService, private _route:Router) {
+  constructor(private _employeeService: EmployeeService, private _route: Router) {
     this.datePickerConfig = Object.assign({}, // customizing date properties like color, maxdate, min date
       {
         containerClass: 'theme-dark-blue',
@@ -66,7 +66,7 @@ export class CreateEmployeesComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveEmployee() :void{
+  saveEmployee(): void {
     this._employeeService.saveEmployee(this.employee);
     this._route.navigate(['list']);
   }
