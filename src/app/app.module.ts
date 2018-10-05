@@ -12,6 +12,7 @@ import { ListEmployeesComponent } from './employees/list-employees.component';
 import { CreateEmployeesComponent } from './employees/create-employees.component';
 import {FormsModule} from '@angular/forms'
 import { EmployeeService } from './employees/employee.service';
+import { DisplayEmployeeComponent } from './employees/display-employee.component';
 
 
 //step1
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     ListEmployeesComponent,
     CreateEmployeesComponent,
     selectvalidationdirective,
-    confirmEqualValidator
+    confirmEqualValidator,
+    DisplayEmployeeComponent
   ],
   imports: [
     BrowserModule,
