@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {selectvalidationdirective} from './shared/select-required-validator.directive'
+import {confirmEqualValidator} from './shared/confirm-equal-validator.directive'
 
 
 
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     AppComponent,
     ListEmployeesComponent,
     CreateEmployeesComponent,
-    selectvalidationdirective
+    selectvalidationdirective,
+    confirmEqualValidator
   ],
   imports: [
     BrowserModule,

@@ -116,10 +116,11 @@
               <option value="1">Help Desk</option>
               <option value="2">IT</option>
               <option value="3">HR</option> -->
-          <option  value="select"> Select Department</option>
+          <option value="select"> Select Department</option>
           <option *ngFor="let dept of departments" value="dept.id">{{dept.name}}</option>
         </select>
-        <span class="help-block" *ngIf="department.touched && department.errors?.defaultSelected">Department is Required</span>
+        <span class="help-block" *ngIf="department.touched && department.errors?.defaultSelected">Department is
+          Required</span>
       </div>
 
       <!--Date of Birth-->
@@ -150,6 +151,30 @@
       <div form="form-group">
         <img [src]="photoPath" height="200" width="200" *ngIf="previewPhoto" />
       </div>
+
+
+      <!--Password-->
+      <div class="form-group" [class.has-error]="password.invalid && password.touched">
+        <label for="password" class="control-label">Password</label>
+
+        <input class="form-control" id="password" required type="text" class="form-control" [(ngModel)]="employee.password"
+          name="password" #password="ngModel">
+        <span class="help-block" *ngIf="password.errors?.required && password.touched">Password is required.</span>
+      </div>
+
+
+      <!--Confirm Password-->
+      <div class="form-group" [class.has-error]="confirmPassword.invalid && confirmPassword.touched">
+        <label for="confirmPassword" class="control-label">Confirm Password</label>
+        <input class="form-control" id="confirmPassword" appConfirmEqualValidator="password" required type="text" class="form-control"
+          [(ngModel)]="employee.confirmPassword" name="confirmPassword" #confirmPassword="ngModel">
+        <span class="help-block" *ngIf="confirmPassword.errors?.required && confirmPassword.touched">Confirm Password
+          is required.</span>
+        <span class="help-block" *ngIf="confirmPassword.errors?.notEqual && confirmPassword.touched && !confirmPassword.errors?.required">Password and
+          Confirm Password do not match.</span>
+
+      </div> 
+
     </div>
 
     <!--Footer-->
