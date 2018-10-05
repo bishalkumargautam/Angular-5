@@ -46,4 +46,8 @@ export class EmployeeService {
         return this.listEmployee;
     }
 
+    saveEmployee(employee: Employee): void {
+        this.listEmployee.push(employee);
+    }
+
 }

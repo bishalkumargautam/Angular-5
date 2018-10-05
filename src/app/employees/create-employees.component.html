@@ -1,4 +1,4 @@
-<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employee)">
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee()">
   <div class="panel panel-primary success">
     <div class="panel-heading">Create Employee</div>
     <div class="panel-body">
@@ -117,7 +117,7 @@
               <option value="2">IT</option>
               <option value="3">HR</option> -->
           <option value="select"> Select Department</option>
-          <option *ngFor="let dept of departments" value="dept.id">{{dept.name}}</option>
+          <option *ngFor="let dept of departments" value='dept.id'>{{dept.name}}</option>
         </select>
         <span class="help-block" *ngIf="department.touched && department.errors?.defaultSelected">Department is
           Required</span>
