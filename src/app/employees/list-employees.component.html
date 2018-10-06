@@ -1,8 +1,10 @@
 <h1 #h1Variable>
 </h1>
 <div *ngFor="let employee of employees">
-  <div (click)="h1Variable.innerHTML=childComponent.getEmployeeFromChild()">
-    <app-display-employee [employee]="employee" #childComponent></app-display-employee>
+  <div (click)="onClick(employee.id)" class="pointCursor">
+    <div>
+      <app-display-employee [employee]="employee" #childComponent></app-display-employee>
+    </div>
   </div>
 </div>
 <!-- <button (click)="nextEmployee()" class="btn btn-primary">Next</button>

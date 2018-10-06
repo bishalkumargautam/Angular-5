@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee.model';
 import { EmployeeService } from './employee.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,11 +19,15 @@ export class ListEmployeesComponent implements OnInit {
   //using service. When an instance of ListEmployeeComponent is created, angular is going to
   // automatically create instance of of EmployeeServce into private field _employeeSerivce. 
   //Then we can use _employeeService to access the EmployeeService instance.
-  constructor(private _employeeService: EmployeeService) { }
+  constructor(private _employeeService: EmployeeService, private _router: Router) { }
 
   ngOnInit() {
     this.employees = this._employeeService.getEmployees();
     // this.employeeToDisplay = this.employees[0];
+  }
+
+  onClick(employeeId: number): void {
+    this._router.navigate(['/employees',employeeId]);
   }
 
   // handleNotify(eventData: Employee) {

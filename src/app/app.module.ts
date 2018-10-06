@@ -13,7 +13,8 @@ import { CreateEmployeesComponent } from './employees/create-employees.component
 import {FormsModule} from '@angular/forms'
 import { EmployeeService } from './employees/employee.service';
 import { DisplayEmployeeComponent } from './employees/display-employee.component';
-import {CreateEmployeeCanDeactivateGuardService}  from './employees/create-employee-can-activate-guard.service'
+import {CreateEmployeeCanDeactivateGuardService}  from './employees/create-employee-can-activate-guard.service';
+import { EmployeeDetailsComponent } from './employees/employee-details.component'
 
 
 //step1
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
    component: CreateEmployeesComponent,
    canDeactivate :[CreateEmployeeCanDeactivateGuardService] //step 3 route guard: tie the route guard with route that you want to protect
   },
-  { path: '', redirectTo: '/list',pathMatch:'full' }
+  { path: '', redirectTo: '/list',pathMatch:'full' },
+  {path:'employees/:id', component:EmployeeDetailsComponent}
 ];
 
 @NgModule({
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     CreateEmployeesComponent,
     selectvalidationdirective,
     confirmEqualValidator,
-    DisplayEmployeeComponent
+    DisplayEmployeeComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,

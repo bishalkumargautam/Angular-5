@@ -16,10 +16,12 @@ export class DisplayEmployeeComponent implements OnInit {
 
   ngOnInit() {
   }
+
   getEmployeeFromChild(): string {
     return this.employee.name + ' ' + this.employee.gender;
   }
 
+  
   // handleClick(){
   //   this.notify.emit(this.employee);
   // }

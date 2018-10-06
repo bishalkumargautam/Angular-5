@@ -28,7 +28,7 @@ export class EmployeeService {
             photoPath: 'assets/images/John.png'
         },
         {
-            id: 1,
+            id: 3,
             name: 'Samantha',
             gender: 'Female',
             contactPreference: 'Phone',
@@ -44,6 +44,10 @@ export class EmployeeService {
 
     getEmployees(): Employee[] {
         return this.listEmployee;
+    }
+
+    getEmployeeById(ID: number): Employee {
+        return this.listEmployee.find(e => e.id === ID);
     }
     saveEmployee(employee: Employee): void {
         this.listEmployee.push(employee);
