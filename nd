@@ -1,0 +1,215 @@
+[33mcommit 1cf12c6db3f44a08bf06f3931f3adeb4fa5c3cac[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Sat Oct 6 09:15:51 2018 -0500
+
+    passing data from child to parent component using # local template variable--another example
+
+[33mcommit ac1974369f6a686496ebcca8632cb3b876bdea3e[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Sat Oct 6 09:09:49 2018 -0500
+
+    passing data from child to parent using # local template variable
+
+[33mcommit 684fc5d9297f96695c470a776bf49a818534853f[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 21:45:19 2018 -0500
+
+    Passing data from child component to parent component
+
+[33mcommit eec0e37b57317a291fae0e1e15ab758babb530c3[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 19:46:31 2018 -0500
+
+    Detecting and reacting to Input property changes using Property Setter
+
+[33mcommit 2afc335824b83e5f1b8db8f6ece1369984fc210e[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 19:29:36 2018 -0500
+
+    ngOnChanges Life Cycle Hook to react to input changes
+
+[33mcommit 04a7300f3d350870cf4f576d78cec0084b121d83[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 18:58:41 2018 -0500
+
+    Change Employee list
+
+[33mcommit a1368204f18149f0135cadea2258c1c6b21b0a1b[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 17:28:19 2018 -0500
+
+    Passing data from parent component to child component
+
+[33mcommit 67ff76f6461f90c9eee1c253779e378f519129a2[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 16:31:25 2018 -0500
+
+    switch case implementation
+
+[33mcommit 4549184407e0baf7bef7e6c9cb6217d2e9f2e79a[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 15:01:07 2018 -0500
+
+    Create Operation in Angular
+
+[33mcommit 6c84cb7fc7d88414976184d21226e81642aa5d75[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 13:54:03 2018 -0500
+
+    Angular 5 Service(Create, Register and use)
+
+[33mcommit 26cf2533dba51da81c3b7840a74231ae37cd65f0[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 13:01:21 2018 -0500
+
+    validating password group
+
+[33mcommit 9880fdf9356a9588d91313e1bb91985c2fbd9af4[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 12:46:20 2018 -0500
+
+    Trigger validation manually
+
+[33mcommit 07b71a08e7ac07edc886297cc6f99d8f31d3614d[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Fri Oct 5 11:49:43 2018 -0500
+
+    password and confirm password match using custom validator
+
+[33mcommit ad200489de3d154c7a1f5dee6231d487a6247220[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Thu Oct 4 18:13:25 2018 -0500
+
+    Custome reusable validaotr
+
+[33mcommit 856195c2a153602f1de6ed620a28d1581c45516f[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Thu Oct 4 17:57:38 2018 -0500
+
+    Custom Select Validator
+
+[33mcommit aed3d487dd62ea409cc121ec108034b91ee7262f[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Thu Oct 4 12:58:19 2018 -0500
+
+    ngValue vs value
+
+[33mcommit ae48e6d92d9e54a64fdf6a1a3c52cc01007784b8[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Thu Oct 4 11:43:36 2018 -0500
+
+    Select List Validation
+
+[33mcommit 0af327959a5c1d1a3a9a71366dffe897b0b8a95c[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Thu Oct 4 10:47:42 2018 -0500
+
+    Dynamically add [required] in email and phone
+
+[33mcommit 5a2da12070c17cb440e76a5c74a02bde31bc5d5b[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Thu Oct 4 10:12:45 2018 -0500
+
+    Radio Button Validation
+
+[33mcommit d5dfda917ff513e5663c0075afc49ca2e7bf4e0e[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Thu Oct 4 09:33:01 2018 -0500
+
+    Angular Email validator
+
+[33mcommit ae28b3904cc49f98db07ea19d1a76658681e7f1b[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 23:57:43 2018 -0500
+
+    form binding with model class
+
+[33mcommit 857521f73ee4bdbc3ce5b032adfd8636ceec8ff6[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 23:55:54 2018 -0500
+
+    Binding form input to our own model class
+
+[33mcommit 978adb47da0f9ae439269fc2fd1cee968b9cf324[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 22:55:08 2018 -0500
+
+    validate input fields and display custom messages
+
+[33mcommit 7d028cfebee4b2f2d4ab5229bf4f62ed19f11910[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 22:06:30 2018 -0500
+
+    Validation property like pristine dirty touched untouched valid and invalid
+
+[33mcommit 534bbce676da913eee45aaae8895e22b36057930[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 20:05:16 2018 -0500
+
+    *ngIf to preview image
+
+[33mcommit 7ee80f24a2aa8012f864113b87324dbb3f84842f[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 19:15:15 2018 -0500
+
+    customizing date of birth(color of calendar, mindate, maxdate, date format, placement of calendar)
+
+[33mcommit 23af20357df02520014a6cd7686347e2c7f55a98[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 18:03:42 2018 -0500
+
+    ngx-bootstrap bsDatePicker directive added for date of birth
+
+[33mcommit 08e5fd83dff570a11a7292dc90c2266a579c35a7[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 17:22:50 2018 -0500
+
+    filling select in html from property binding and *ngFor
+
+[33mcommit 8c7a676e31291a2a5a9db339766d71f5c124896d[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 16:45:20 2018 -0500
+
+    Select List Implemented--hard coded through HTML
+
+[33mcommit 721423567610b299590dc81a3b308bb6b49eb29d[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Wed Oct 3 14:43:07 2018 -0500
+
+    Added Create Form fields
+
+[33mcommit 1a5e3540e57082f8f8b4e4937eeb91d355875809[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Tue Oct 2 17:21:18 2018 -0500
+
+    Router Configuration
+
+[33mcommit a3120e5d60435f823bf41579afd4ad52ed6a5511[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Tue Oct 2 16:24:29 2018 -0500
+
+    Employee Detail page created (Read Operation)
+
+[33mcommit a40b1f3ee8e00816fa43593f73f441eb224ded13[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Tue Oct 2 13:41:55 2018 -0500
+
+    models created
+
+[33mcommit 64cb1c19ad843c55df39560f0364205f78b67535[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Tue Oct 2 13:34:08 2018 -0500
+
+    created models
+
+[33mcommit e469a66946366fd79c48e207a7c6894e59fdea9e[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Tue Oct 2 13:10:31 2018 -0500
+
+    Empoyee Model Created
+
+[33mcommit 82cf82c6250763cfc31cdfa5dadcdfc7d32ab311[m
+Author: Bishal Gautam <bishalkrgautam@gmail.com>
+Date:   Tue Oct 2 11:13:48 2018 -0500
+
+    initial commit

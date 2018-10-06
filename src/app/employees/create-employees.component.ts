@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Department } from '../models/department.model';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
@@ -21,6 +21,11 @@ export class CreateEmployeesComponent implements OnInit {
 
   //define departments properties to dynamically populate select in .html
   datePickerConfig: Partial<BsDatepickerConfig>;
+
+  //employeeForm is local template variabale that has been defined in the create employee view template.
+  //Here we are createing a public property createEmployeeForm of type Ngform. Now we can retrieve the form values from our
+  //create-employee-route-guard to check the form is dirty. 
+  @ViewChild('employeeForm') public createEmployeeForm: NgForm;
 
   previewPhoto: Boolean = false;
 
@@ -47,7 +52,7 @@ export class CreateEmployeesComponent implements OnInit {
     { id: 5, name: 'Admin' }
   ];
 
-  constructor(private _employeeService:EmployeeService, private _route:Router) {
+  constructor(private _employeeService: EmployeeService, private _route: Router) {
     this.datePickerConfig = Object.assign({}, // customizing date properties like color, maxdate, min date
       {
         containerClass: 'theme-dark-blue',
@@ -66,7 +71,7 @@ export class CreateEmployeesComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveEmployee() :void{
+  saveEmployee(): void {
     this._employeeService.saveEmployee(this.employee);
     this._route.navigate(['list']);
   }
