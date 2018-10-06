@@ -1,4 +1,4 @@
-<div class="panel panel-primary" >
+<div class="panel panel-primary">
   <div class="panel-heading">
     <h3 class="panel-title">{{employee.name}}</h3>
   </div>
@@ -79,6 +79,10 @@
     </div>
   </div>
   <div class="panel-footer">
-    <input type="button" class="btn btn-sm btn-primary" value="Return" routerLink="/list">
+    <div>
+      <input type="button" class="btn btn-sm btn-primary" value="Return" routerLink="/list">
+      <input type="button" class="btn btn-sm btn-primary pull-right" value="Next Employee" (click)="nextEmployee()">
+
+    </div>
   </div>
 </div>

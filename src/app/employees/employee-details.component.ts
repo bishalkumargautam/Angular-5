@@ -1,6 +1,6 @@
 import { Employee } from './../models/employee.model';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeService } from './employee.service';
 
 
@@ -12,11 +12,27 @@ import { EmployeeService } from './employee.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
+  id: number;
   employee: Employee;
-  constructor(private _route: ActivatedRoute, private _employee: EmployeeService) { }
+  constructor(private _route: ActivatedRoute,
+    private _employee: EmployeeService,
+    private _router: Router) { }
 
   ngOnInit() {
-    const id = +this._route.snapshot.paramMap.get('id');
-    this.employee = this._employee.getEmployeeById(id);
+    //subscribing to route parameter changes.
+    this.id = +this._route.paramMap.subscribe(params => {
+      this.id = +params.get('id');
+      this.employee = this._employee.getEmployeeById(this.id);
+    })
+  }
+
+  nextEmployee() {
+    if(this.id<3){
+    this.id = this.id + 1;
+    }
+    else{
+      this.id=1;
+    }
+    this._router.navigate(['/employees', this.id]);
   }
 }
