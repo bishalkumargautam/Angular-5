@@ -1,6 +1,9 @@
-<!-- <div *ngFor="let employee of employees">
-  <app-display-employee [employee]="employee"></app-display-employee>
-</div> -->
-<button (click)="nextEmployee()" class="btn btn-primary">Next</button>
+<h1>
+  {{displayEmployee}}
+</h1>
+<div *ngFor="let employee of employees">
+  <app-display-employee [employee]="employee" (notify)="handleNotify($event)" ></app-display-employee>
+</div>
+<!-- <button (click)="nextEmployee()" class="btn btn-primary">Next</button>
 <br/><br/>
-<app-display-employee [employee]="employeeToDisplay"></app-display-employee>
+<app-display-employee [employee]="employeeToDisplay"></app-display-employee> -->

@@ -10,9 +10,10 @@ import { EmployeeService } from './employee.service';
 })
 export class ListEmployeesComponent implements OnInit {
 
+  displayEmployee: string;
   employees: Employee[];
-  employeeToDisplay: Employee;
-  private arrayIndex = 1;
+  // employeeToDisplay: Employee;
+  // private arrayIndex = 1;
 
   //using service. When an instance of ListEmployeeComponent is created, angular is going to
   // automatically create instance of of EmployeeServce into private field _employeeSerivce. 
@@ -21,20 +22,24 @@ export class ListEmployeesComponent implements OnInit {
 
   ngOnInit() {
     this.employees = this._employeeService.getEmployees();
-    this.employeeToDisplay = this.employees[0];
+    // this.employeeToDisplay = this.employees[0];
   }
 
-  nextEmployee(): void {
-    if (this.arrayIndex <= 2) {
-      this.employeeToDisplay = this.employees[this.arrayIndex];
-      this.arrayIndex++;
-
-
-    }
-    else {
-      this.employeeToDisplay = this.employees[0];
-      this.arrayIndex = 0;
-    }
-
+  handleNotify(eventData: string) {
+    this.displayEmployee = eventData;
   }
+
+  // nextEmployee(): void {
+  //   if (this.arrayIndex <= 2) {
+  //     this.employeeToDisplay = this.employees[this.arrayIndex];
+  //     this.arrayIndex++;  
+
+
+  //   }
+  //   else {
+  //     this.employeeToDisplay = this.employees[0];
+  //     this.arrayIndex = 0;
+  //   }
+
+  // }
 }
