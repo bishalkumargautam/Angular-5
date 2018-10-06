@@ -10,7 +10,7 @@ import { EmployeeService } from './employee.service';
 })
 export class ListEmployeesComponent implements OnInit {
 
-  displayEmployee: string;
+  // displayEmployee: Employee;
   employees: Employee[];
   // employeeToDisplay: Employee;
   // private arrayIndex = 1;
@@ -25,9 +25,9 @@ export class ListEmployeesComponent implements OnInit {
     // this.employeeToDisplay = this.employees[0];
   }
 
-  handleNotify(eventData: string) {
-    this.displayEmployee = eventData;
-  }
+  // handleNotify(eventData: Employee) {
+  //   this.displayEmployee = eventData;
+  // }
 
   // nextEmployee(): void {
   //   if (this.arrayIndex <= 2) {

@@ -1,5 +1,5 @@
 import { Employee } from './../models/employee.model';
-import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-display-employee',
@@ -9,7 +9,7 @@ import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 export class DisplayEmployeeComponent implements OnInit {
 
   @Input() employee: Employee;
-  @Output() notify: EventEmitter<string>= new EventEmitter<string>(); //we transmit data from child component to parent component 
+  // @Output() notify: EventEmitter<Employee>= new EventEmitter<Employee>(); //we transmit data from child component to parent component 
   //using EventEmitter
 
   constructor() { }
@@ -17,9 +17,9 @@ export class DisplayEmployeeComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleClick(){
-    this.notify.emit(this.employee.name);
-  }
+  // handleClick(){
+  //   this.notify.emit(this.employee);
+  // }
 
   //change detection using setter and getter method
   // private _employee: Employee;
